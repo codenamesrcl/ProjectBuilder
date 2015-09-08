@@ -1,0 +1,6 @@
+<div style="background:#eee;">
+	<a data-ng-click="vm.toggleShow()" style="cursor:pointer; padding:5px; border:1px solid black; display:inline-block; margin-right:5px;">[{{vm.buttonText}}]</a>
+	<span>{{vm.title}}</span>
+</div>
+<div data-ng-show="vm.show" data-ng-transclude>
+</div>

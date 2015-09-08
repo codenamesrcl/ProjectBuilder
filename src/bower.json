@@ -1,0 +1,22 @@
+{
+  "name": "projectBuilder",
+  "version": "0.0.1",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.5",
+    "angular-animate": "~1.4.5",
+    "angular-bootstrap": "~0.13.4",
+    "bootstrap": "~3.3.5",
+    "lodash": "~3.10.1"
+  }
+}

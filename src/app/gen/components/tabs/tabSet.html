@@ -1,0 +1,10 @@
+<div>
+	<ul>
+		<li data-ng-repeat="tab in tabset.tabs"
+			data-ng-class="{'tab-active': tab.active}">
+			<a data-ng-click="tabset.select(tab)">{{tab.tabtitle}}</a>
+		</li>
+	</ul>
+
+	<span data-ng-transclude></span>
+</div>

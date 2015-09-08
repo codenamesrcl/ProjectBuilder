@@ -1,0 +1,40 @@
+<div style="border: 1px solid black; padding: 10px;" class="clearfix">
+	<div>
+		<section class="col-xs-3" style="float:right;">
+			<button class="btn"
+				data-ng-class="[{'btn-success': !vm.started}, {'btn-error': vm.started}]"
+				data-ng-click="vm.toggleStart()">{{vm.btnStartText()}}</button>
+		</section>
+
+		<section class="col-xs-5">
+			<button type="button" class="btn btn-default" ng-click="vm.toggleVisiblity()">
+				<span data-ng-class="[{ 'glyphicon glyphicon-plus': !vm.visible }, {'glyphicon glyphicon-minus': vm.visible}]"></span>
+			</button>
+			<label data-ng-bind="vm.processname"></label>
+
+		</section>
+	</div>
+	<div>
+		<section class="col-xs-8">
+			<label>Command: {{vm.command}}</label>
+		</section>
+		<section class="col-xs-4">
+			<label>Status</label> 
+			<span>{{vm.txtStatus()}}</span>
+		</section>
+	</div>
+	<div data-collapse="!vm.visible"
+     	class="col-xs-12">
+
+	     <h4>Status Messages <span>(Most Recent First)</span></h4>
+
+	     <section style="max-height:200px; overflow:auto;">
+		     <ul>
+		     	<li data-ng-repeat="message in vm.stdout | orderBy : '-id'">
+		     		<span data-ng-bind="message.data"></span>
+		     	</li>
+		     </ul>
+	     </section>
+
+	</div>
+</div>

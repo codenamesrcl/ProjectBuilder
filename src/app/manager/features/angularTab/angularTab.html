@@ -1,0 +1,25 @@
+<div data-ng-controller="angularTab as vm" style="padding: 10px;">
+
+	<h2>Angular</h2>
+
+	<div data-ng-repeat="childprocess in vm.childProcessList">
+		<h4 data-ng-bind="childprocess.name"></h4>
+
+		<div data-child-process
+			 data-processname="{{childprocess.name + ' - Watcher'}}"
+			 data-command="{{childprocess.commandSetup}}"
+			 data-outputlimit="100">
+		</div>
+		<div data-child-process
+			 data-processname="{{childprocess.name + ' - Dev Builder'}}"
+			 data-command="{{childprocess.commandBuildDev}}"
+			 data-outputlimit="100">
+		</div>
+		<div data-child-process
+			 data-processname="{{childprocess.name + ' - Prod Builder'}}"
+			 data-command="{{childprocess.commandBuildProd}}"
+			 data-outputlimit="100">
+		</div>
+	</div>
+
+</div>

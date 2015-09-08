@@ -1,0 +1,5 @@
+angular.module("gen").run(["$templateCache", function($templateCache) {$templateCache.put("/app/gen/components/dropList/dropList.html","<div style=\"background:#eee;\"> <a data-ng-click=\"vm.toggleShow()\" style=\"cursor:pointer; padding:5px; border:1px solid black; display:inline-block; margin-right:5px;\">[{{vm.buttonText}}]</a> <span>{{vm.title}}</span> </div> <div data-ng-show=\"vm.show\" data-ng-transclude=\"\"> </div>");
+$templateCache.put("/app/gen/components/lists/listItem.html","");
+$templateCache.put("/app/gen/components/lists/listSet.html","");
+$templateCache.put("/app/gen/components/tabs/tabItem.html","<div data-ng-show=\"active\" data-ng-transclude=\"\"> </div>");
+$templateCache.put("/app/gen/components/tabs/tabSet.html","<div> <ul> <li data-ng-repeat=\"tab in tabset.tabs\" data-ng-class=\"{\'tab-active\': tab.active}\"> <a data-ng-click=\"tabset.select(tab)\">{{tab.tabtitle}}</a> </li> </ul> <span data-ng-transclude=\"\"></span> </div> ");}]);
