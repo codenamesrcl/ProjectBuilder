@@ -10,7 +10,7 @@
      * @requires  $q
      * 
      * @description
-     * A generic angular factory
+     * Exposes aspects of node's process module to angular
      */
     angular
         .module('nodetools')

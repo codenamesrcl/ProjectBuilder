@@ -5,7 +5,7 @@
         // Angular modules 
 
         // Custom modules 
-
+        'nodetools'
         // 3rd Party Modules
         
     ]);
@@ -19,16 +19,33 @@
 		.module('appConfig')
 		.factory('appConfig.builderConfig', factory);
 
-	factory.$inject = [];
+	factory.$inject = ['nodetools.fs', 'nodetools.process'];
 
-	function factory(){
+	function factory(fs, appProcess){
 		var service = {
 			builders: []
 		};
 
-		service.builders = [
-			new BuilderConf("Project Builder", "projectBuilder")
-		];
+		console.log(appProcess);
+
+		var cwd = appProcess.getCwd();
+
+		fs.getDirectoryContents(cwd + '/builders').then(
+			function(result){
+				result.files.forEach(function(item, index, array){
+					var conf = new BuilderConf(item.name, item.name);
+					service.builders.push(conf);
+				})
+
+				console.log(service.builders);
+			},
+			function(error){
+				console.log(error);
+			});
+
+
+
+
 
 
 		return service;

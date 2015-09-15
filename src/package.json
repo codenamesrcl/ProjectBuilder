@@ -1,7 +1,7 @@
 {
   "devDependencies": {},
   "name": "ProjectBuilder",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A builder for web applications built with angularjs and sass",
   "main": "index.html",
   "dependencies": {
@@ -26,6 +26,7 @@
     "jshint-stylish": "^2.0.1",
     "lodash": "^3.10.1",
     "moment": "^2.10.6",
+    "q": "^1.4.1",
     "tree-kill": "^0.1.1"
   },
   "scripts": {

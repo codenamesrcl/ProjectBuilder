@@ -1,6 +1,20 @@
 (function(){
 	'use strict'
 
+	/**
+	*
+	* @ngdoc factory
+	* @module  nodetools
+	* @name  execFactory
+	*
+	* 
+	* @description
+	* Exposes exec child_processes to angular
+	* Very powerful stuff 
+	* Users should be familiar with a cli and/or Node's REPL before
+	* using within angular
+	*/
+
 	angular 
 		.module('nodetools')
 		.factory('execFactory', factory);
